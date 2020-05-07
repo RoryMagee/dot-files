@@ -14,7 +14,6 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-let g:gruvbox_contrast_dark='hard'
 set colorcolumn=80
 highligh ColorColumn ctermbg=0
 
