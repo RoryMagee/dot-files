@@ -85,4 +85,4 @@ nnoremap L gt
 nnoremap <Leader>s :wa<CR>
 
 "HTML Skip Line
-nnoremap <Leader><CR> D:pu<CR>O
+nnoremap <Leader><CR> i<CR><Esc>O 
