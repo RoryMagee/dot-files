@@ -71,7 +71,7 @@ ZSH_THEME="cloud"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-#source ~/dot-files/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/dot-files/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 # User configuration
@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cya="sudo poweroff"
-alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 
 function chpwd() {
     emulate -L zsh

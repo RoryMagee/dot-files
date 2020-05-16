@@ -1,5 +1,8 @@
 syntax on
 
+set laststatus=2
+set statusline=%f
+set timeoutlen=1000 ttimeoutlen=0
 set belloff=all
 set noerrorbells
 set tabstop=4 softtabstop=4
@@ -24,6 +27,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'preservim/nerdtree'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 let g:gruvbox_contrast_dark='medium'
@@ -34,11 +38,15 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
+let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let mapleader = " "
 let g:netrw_browse_split=2
 let g:netrw_banner=0
 let g:netrw_winsize = 25
+
+let g:user_emmet_install_global=0
+autocmd FileType html,css EmmetInstall
 
 let g:ctrlp_use_caching=0
 
@@ -72,3 +80,9 @@ nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 "Tab Navigation
 nnoremap H gT
 nnoremap L gt
+
+"Save All
+nnoremap <Leader>s :wa<CR>
+
+"HTML Skip Line
+nnoremap <Leader><CR> D:pu<CR>O
