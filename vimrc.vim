@@ -70,7 +70,7 @@ nnoremap <leader>pv :NERDTreeToggle<CR>
 nnoremap <leader>ps :Rg<SPACE>
 
 "Resize panes 
-nnoremap <silent> <Leader>+ :vertical resize +5<CR>
+nnoremap <silent> <Leader>= :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
 "YouCompleteMe commands
