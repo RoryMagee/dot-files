@@ -46,8 +46,6 @@ let g:netrw_browse_split=2
 let g:netrw_banner=0
 let g:netrw_winsize = 25
 
-"Airline Settings
-let g:airline#extensions#tabline#enabled = 1
 
 let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
