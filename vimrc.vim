@@ -29,6 +29,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
+Plug 'kana/vim-fakeclip'
 call plug#end()
 
 let g:gruvbox_contrast_dark='medium'
@@ -56,7 +57,7 @@ nnoremap <CR> :nohlsearch<CR><CR>
 
 "Surrounding curyl braces
 inoremap {<CR> {<CR>}<Esc>O
-inoremap =><space>{<CR> =><space>{<CR>});<Esc>O
+inoremap ><space>{<CR> ><space>{<CR>});<Esc>O
 
 "Pane navigation
 nnoremap <leader>h :wincmd h<CR>
