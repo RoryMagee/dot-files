@@ -72,7 +72,7 @@ nnoremap <leader>pv :NERDTreeToggle<CR>
 
 "RipGrep
 nnoremap <leader>ps :Rg<SPACE>
-
+"test
 "Resize panes 
 nnoremap <silent> <Leader>= :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
