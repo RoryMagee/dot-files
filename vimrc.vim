@@ -30,6 +30,7 @@ Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'kana/vim-fakeclip'
+Plug 'valloric/matchtagalways'
 call plug#end()
 
 let g:gruvbox_contrast_dark='medium'
