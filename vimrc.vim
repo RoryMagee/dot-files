@@ -2,6 +2,7 @@ syntax on
 
 set laststatus=2
 set statusline=%f
+set noshowmode
 set timeoutlen=1000 ttimeoutlen=0
 set belloff=all
 set noerrorbells
@@ -89,3 +90,6 @@ nnoremap <Leader>s :wa<CR>
 
 "HTML Skip Line
 nnoremap <Leader><CR> i<CR><Esc>O 
+
+"jj to escape insert mode
+inoremap jj <esc>
