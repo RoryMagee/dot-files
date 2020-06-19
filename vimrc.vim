@@ -131,6 +131,7 @@ nnoremap <leader>rl :source ~/.config/nvim/init.vim <CR>
 fun! GoOmnisharp()
     nnoremap <buffer> <Leader>gd :OmniSharpGotoDefinition<CR>
     nnoremap <buffer> <Leader>gr :OmniSharpFindUsages<CR>
+    nnoremap <buffer> <Leader>gc :OmniSharpGetCodeActions<CR>
     nnoremap <buffer> <Leader>cc :OmniSharpGlobalCodeCheck<CR>
     nnoremap <buffer> <Leader>gf :OmniSharpFixUsings<CR>
 endfun
