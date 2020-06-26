@@ -8,11 +8,11 @@ set timeoutlen=1000 ttimeoutlen=0
 set belloff=all
 set autoread
 set noerrorbells
-set tabstop=2 softtabstop=2
-set shiftwidth=2
-set expandtab
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab 
 set hidden
-set smartindent
+set autoindent
 set nu
 set nowrap
 set smartcase
@@ -48,7 +48,7 @@ let g:gruvbox_contrast_dark='soft'
 colorscheme gruvbox
 set background=dark
 
-filetype indent plugin on
+filetype plugin indent on 
 
 if executable('rg')
     let g:rg_derive_root='true'
