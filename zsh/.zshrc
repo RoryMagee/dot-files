@@ -35,7 +35,7 @@ source ~/dot-files/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='nvim'
+   export EDITOR='vim'
  else
    export EDITOR='nvim'
  fi
