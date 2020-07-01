@@ -1,5 +1,7 @@
 syntax on
 
+set number
+set relativenumber
 set guicursor=
 set laststatus=2
 set statusline=%f
