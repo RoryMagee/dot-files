@@ -9,6 +9,7 @@ set belloff=all
 set autoread
 set noerrorbells
 set tabstop=4 softtabstop=4
+set nohlsearch
 set shiftwidth=4
 set expandtab 
 set hidden
@@ -75,8 +76,6 @@ let g:ctrlp_use_caching=0
 let g:ale_linters = {
 \ 'cs': ['OmniSharp']
 \}
-
-nnoremap <CR> :nohlsearch<CR><CR>
 
 "Surrounding curyl braces
 inoremap {<CR> {<CR>}<Esc>O
