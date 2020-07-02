@@ -3,6 +3,7 @@ export ZSH="/home/rory/.oh-my-zsh"
 ZSH_THEME="awesomepanda"
 
 HYPHEN_INSENSITIVE="true"
+CASE_SENSITIVE="false"
 
 COMPLETION_WAITING_DOTS="true"
 
@@ -20,16 +21,19 @@ COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=/home/rory/dot-files/zsh/
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+)
 
 source $ZSH/oh-my-zsh.sh
+
 source ~/dot-files/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
