@@ -21,7 +21,7 @@ COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=/home/rory/dot-files/zsh/
+ZSH_CUSTOM=/home/rory/dot-files/zsh/plugins/
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -34,6 +34,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+source ~/dot-files/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dot-files/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
