@@ -112,6 +112,9 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap  <silent><expr> <C-space> coc#refresh()
 
+"Exit Command
+nnoremap <leader>q :q<CR>
+nnoremap <leader>wq :wq<CR>
 
 "Tab Navigation
 nnoremap H gT
