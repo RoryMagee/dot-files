@@ -45,9 +45,15 @@ Plug 'dense-analysis/ale', {'for': 'cs'}
 Plug 'kana/vim-fakeclip'
 Plug 'valloric/matchtagalways'
 Plug 'tpope/vim-dispatch'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-let g:gruvbox_contrast_dark='soft'
+let g:gruvbox_contrast_dark='hard'
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+let g:gruvbox_invert_selection = '0'
 colorscheme gruvbox
 set background=dark
 
@@ -69,6 +75,7 @@ let g:OmniSharp_selector_ui = 'ctrlp'
 let g:OmniSharp_start_without_solution = 1
 let g:OmniSharp_highlighting = 3
 let g:OmniSharp_timeout = 5
+let g:airline_powerline_fonts = 1
 
 let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
