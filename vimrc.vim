@@ -1,5 +1,4 @@
-syntax on
-
+syntax on 
 set number
 set relativenumber
 set guicursor=
@@ -46,6 +45,7 @@ Plug 'kana/vim-fakeclip'
 Plug 'valloric/matchtagalways'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 let g:gruvbox_contrast_dark='hard'
@@ -86,10 +86,6 @@ let g:ale_linters = {
 \ 'cs': ['OmniSharp']
 \}
 
-"Surrounding curyl braces
-inoremap {<CR> {<CR>}<Esc>O
-inoremap ><space>{<CR> ><space>{<CR>});<Esc>O
-
 "Pane navigation
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -119,9 +115,6 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap  <silent><expr> <C-space> coc#refresh()
 
-"Exit Command
-nnoremap <leader>q :q<CR>
-nnoremap <leader>wq :wq<CR>
 
 "Tab Navigation
 nnoremap H gT
