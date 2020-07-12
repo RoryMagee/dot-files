@@ -92,6 +92,8 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+"Create new file
+nnoremap <leader>nf :e %:h/
 "Open NERDTree
 nnoremap <leader>pv :NERDTreeToggle<CR>
 "nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
@@ -138,6 +140,7 @@ fun! GoOmnisharp()
     nnoremap <buffer> <Leader>gc :OmniSharpGetCodeActions<CR>
     nnoremap <buffer> <Leader>cc :OmniSharpGlobalCodeCheck<CR>
     nnoremap <buffer> <Leader>gf :OmniSharpFixUsings<CR>
+
 endfun
 
 fun! GoTypescript()
