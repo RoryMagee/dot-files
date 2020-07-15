@@ -48,6 +48,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 alias v="nvim"
 alias cya="sudo poweroff"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
+alias xclip="xclip -selection c"
 
 function chpwd() {
     emulate -L zsh
