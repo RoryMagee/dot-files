@@ -30,6 +30,7 @@ ZSH_CUSTOM=/home/rory/dot-files/zsh/plugins/
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -48,7 +49,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 alias v="nvim"
 alias cya="sudo poweroff"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
-alias xclip="xclip -selection c"
+# alias xclip="xclip -selection c"
 
 function chpwd() {
     emulate -L zsh
