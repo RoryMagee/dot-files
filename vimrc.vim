@@ -46,15 +46,8 @@ Plug 'valloric/matchtagalways'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
-
-"let g:gruvbox_contrast_dark='hard'
-"if exists('+termguicolors')
-"    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-"endif
-"let g:gruvbox_invert_selection = '0'
-"colorscheme gruvbox
 
 filetype plugin indent on 
 
