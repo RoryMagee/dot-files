@@ -7,6 +7,8 @@ CASE_SENSITIVE="false"
 
 COMPLETION_WAITING_DOTS="true"
 
+setopt auto_cd
+
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
