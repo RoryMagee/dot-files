@@ -32,21 +32,21 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'leafgarland/typescript-vim'
-Plug 'kien/ctrlp.vim'
+" Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-scripts/Tabmerge'
 Plug 'dense-analysis/ale', {'for': 'cs'}
 Plug 'kana/vim-fakeclip'
 Plug 'valloric/matchtagalways'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
-Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 filetype plugin indent on 
@@ -55,7 +55,9 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" let g:fzf_layout = { 'window': { 'width': 0.8, 'heigth': 0.8 } }
+let $FZF_DEFAULT_OPTS = '--reverse'
 let mapleader = " "
 let g:netrw_browse_split=2
 let g:netrw_banner=0
@@ -63,7 +65,7 @@ let g:netrw_winsize = 25
 let g:OmniSharp_server_stdio = 0 
 let g:OmniSharp_timeout = 5
 let g:OmniSharp_server_stdio = 1 
-let g:OmniSharp_selector_ui = 'ctrlp'
+" let g:OmniSharp_selector_ui = 'ctrlp'
 let g:OmniSharp_start_without_solution = 1
 let g:OmniSharp_highlighting = 3
 let g:OmniSharp_timeout = 5
@@ -72,7 +74,7 @@ let g:airline_powerline_fonts = 1
 
 let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
-let g:ctrlp_use_caching=0
+" let g:ctrlp_use_caching=0
 
 
 let g:ale_linters = {
@@ -87,6 +89,7 @@ nnoremap <leader>l :wincmd l<CR>
 
 "Helpful Ish
 nnoremap <leader>nf :e %:h/
+nnoremap <C-p> :GFiles<CR>
 
 "Open NERDTree
 nnoremap <leader>pv :NERDTreeToggle<CR>
