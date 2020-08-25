@@ -56,7 +56,29 @@ if executable('rg')
 endif
 
 " let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-" let g:fzf_layout = { 'window': { 'width': 0.8, 'heigth': 0.8 } }
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+" let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+" 
+" function! FloatingFZF()
+"   let buf = nvim_create_buf(v:false, v:true)
+"   call setbufvar(buf, '&signcolumn', 'no')
+" 
+"   let height = float2nr(50)
+"   let width = float2nr(120)
+"   let horizontal = float2nr((&columns - width) / 2)
+"   let vertical = 1
+" 
+"   let opts = {
+"         \ 'relative': 'editor',
+"         \ 'row': vertical,
+"         \ 'col': horizontal,
+"         \ 'width': width,
+"         \ 'height': height,
+"         \ 'style': 'minimal'
+"         \ }
+" 
+"   call nvim_open_win(buf, v:true, opts)
+" endfunction
 let $FZF_DEFAULT_OPTS = '--reverse'
 let mapleader = " "
 let g:netrw_browse_split=2
