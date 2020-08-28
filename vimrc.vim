@@ -32,7 +32,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'leafgarland/typescript-vim'
-" Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
@@ -70,11 +69,9 @@ let g:OmniSharp_start_without_solution = 1
 let g:OmniSharp_highlighting = 3
 let g:OmniSharp_timeout = 5
 let g:airline_powerline_fonts = 1
-"let g:ctrlp_working_path_mode = 0
 
 let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
-" let g:ctrlp_use_caching=0
 
 
 let g:ale_linters = {
@@ -93,7 +90,6 @@ nnoremap <C-p> :GFiles<CR>
 
 "Open NERDTree
 nnoremap <leader>pv :NERDTreeToggle<CR>
-"nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 "RipGrep
 nnoremap <leader>ps :Rg<SPACE>
