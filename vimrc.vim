@@ -127,6 +127,11 @@ inoremap jj <esc>
 "Reload vimrc
 nnoremap <leader>rl :source ~/.config/nvim/init.vim <CR>
 
+nmap  <leader>gd <Plug>(coc-definition)
+nmap  <leader>gr <Plug>(coc-references)
+nmap <leader>gf <Plug>(coc-fix-current)
+nnoremap  <leader>cr :CocRestart<CR>
+
 fun! GoOmnisharp()
     nnoremap <buffer> <Leader>gd :OmniSharpGotoDefinition<CR>
     nnoremap <buffer> <Leader>gr :OmniSharpFindUsages<CR>
@@ -136,12 +141,4 @@ fun! GoOmnisharp()
 
 endfun
 
-fun! GoTypescript()
-    nmap  <leader>gd <Plug>(coc-definition)
-    nmap  <leader>gr <Plug>(coc-references)
-    nmap <leader>gf <Plug>(coc-fix-current)
-    nnoremap  <leader>cr :CocRestart
-endfun
-
-autocmd FileType typescript :call GoTypescript()
 autocmd FileType cs :call GoOmnisharp()
