@@ -133,6 +133,7 @@ nmap <leader>gf <Plug>(coc-fix-current)
 nnoremap  <leader>cr :CocRestart<CR>
 
 fun! GoOmnisharp()
+    setlocal ts=2 sts=2 sw=2
     nnoremap <buffer> <Leader>gd :OmniSharpGotoDefinition<CR>
     nnoremap <buffer> <Leader>gr :OmniSharpFindUsages<CR>
     nnoremap <buffer> <Leader>gc :OmniSharpGetCodeActions<CR>
