@@ -54,7 +54,6 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS = '--reverse'
 let mapleader = " "
@@ -64,7 +63,6 @@ let g:netrw_winsize = 25
 let g:OmniSharp_server_stdio = 0 
 let g:OmniSharp_timeout = 5
 let g:OmniSharp_server_stdio = 1 
-" let g:OmniSharp_selector_ui = 'ctrlp'
 let g:OmniSharp_start_without_solution = 1
 let g:OmniSharp_highlighting = 3
 let g:OmniSharp_timeout = 5
@@ -110,7 +108,6 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap  <silent><expr> <C-space> coc#refresh()
 
-
 "Tab Navigation
 nnoremap H gT
 nnoremap L gt
@@ -139,7 +136,6 @@ fun! GoOmnisharp()
     nnoremap <buffer> <Leader>gc :OmniSharpGetCodeActions<CR>
     nnoremap <buffer> <Leader>cc :OmniSharpGlobalCodeCheck<CR>
     nnoremap <buffer> <Leader>gf :OmniSharpFixUsings<CR>
-
 endfun
 
 autocmd FileType cs :call GoOmnisharp()
