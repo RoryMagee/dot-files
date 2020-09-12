@@ -17,6 +17,7 @@ set hidden
 set autoindent
 set nu
 set nowrap
+set splitright
 set smartcase
 set noswapfile
 set nobackup
