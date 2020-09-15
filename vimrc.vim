@@ -121,6 +121,7 @@ nnoremap <Leader><CR> i<CR><Esc>O
 
 "jj to escape insert mode
 inoremap jj <esc>
+inoremap jk <esc>
 
 "Reload vimrc
 nnoremap <leader>rl :source ~/.config/nvim/init.vim <CR>
