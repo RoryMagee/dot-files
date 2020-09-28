@@ -50,7 +50,7 @@ alias dkr="docker"
 alias dkrc="docker-compose"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 alias sleep="systemctl suspend"
-alias weather="curl http://wttr.in"
+alias weather="curl http://wttr.in/newry"
 
 function chpwd() {
     emulate -L zsh
