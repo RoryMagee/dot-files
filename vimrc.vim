@@ -110,9 +110,9 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap  <silent><expr> <C-space> coc#refresh()
 
 "Vim Fugitive Keybindings
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
-nmap <leader>gs :G<CR>
+nmap <leader>gl :diffget //3<CR>
+nmap <leader>gs :diffget //2<CR>
+nmap <leader>gg :G<CR>
 
 "Tab Navigation
 nnoremap H gT
