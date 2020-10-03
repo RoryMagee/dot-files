@@ -112,7 +112,9 @@ inoremap  <silent><expr> <C-space> coc#refresh()
 "Vim Fugitive Keybindings
 nmap <leader>gl :diffget //3<CR>
 nmap <leader>gs :diffget //2<CR>
-nmap <leader>gg :G<CR>
+nmap <leader>ga :G<CR>
+nmap <leader>gca :Gcommit -v -a<CR>
+nmap <leader>gp :Gpush<CR>
 
 "Tab Navigation
 nnoremap H gT
