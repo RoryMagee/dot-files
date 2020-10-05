@@ -205,5 +205,4 @@ focus_on_window_activation smart
 # alt-tab equiv
 bindsym $mod+Tab workspace back_and_forth
 
-# screenshot binds
-bindsym Shift+Print exec "sleep 0.2; gnome-screenshot -a"
+hide_edge_borders both
