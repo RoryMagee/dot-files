@@ -206,3 +206,9 @@ focus_on_window_activation smart
 bindsym $mod+Tab workspace back_and_forth
 
 hide_edge_borders both
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
