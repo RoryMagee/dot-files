@@ -47,6 +47,7 @@ Plug 'valloric/matchtagalways'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 filetype plugin indent on 
