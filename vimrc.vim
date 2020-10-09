@@ -127,6 +127,10 @@ nnoremap <Leader>s :wa<CR>
 "HTML Skip Line
 nnoremap <Leader><CR> i<CR><Esc>O 
 
+"Insert Blank Line Below/Above
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
+
 "jj to escape insert mode
 inoremap jj <esc>
 inoremap jk <esc>
@@ -139,7 +143,7 @@ nmap  <leader>gr <Plug>(coc-references)
 nmap <leader>gf <Plug>(coc-fix-current)
 nnoremap  <leader>cr :CocRestart<CR>
 
-fun! GoOmnisharp()
+fun! CSharp()
     setlocal ts=2 sts=2 sw=2
     nnoremap <buffer> <Leader>gd :OmniSharpGotoDefinition<CR>
     nnoremap <buffer> <Leader>gr :OmniSharpFindUsages<CR>
@@ -148,4 +152,4 @@ fun! GoOmnisharp()
     nnoremap <buffer> <Leader>gf :OmniSharpFixUsings<CR>
 endfun
 
-autocmd FileType cs :call GoOmnisharp()
+autocmd FileType cs :call CSharp()
