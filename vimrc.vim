@@ -128,8 +128,8 @@ nnoremap <Leader>s :wa<CR>
 nnoremap <Leader><CR> i<CR><Esc>O 
 
 "Insert Blank Line Below/Above
-nnoremap <Leader>o o<Esc>
-nnoremap <Leader>O O<Esc>
+nnoremap <Leader>o o<Esc>k
+nnoremap <Leader>O O<Esc>j
 
 "jj to escape insert mode
 inoremap jj <esc>
