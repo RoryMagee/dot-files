@@ -1,6 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
-set ZSH_DISABLE_COMPFIX=true
-
+ZSH_DISABLE_COMPFIX=true
 ZSH_THEME="awesomepanda"
 
 HYPHEN_INSENSITIVE="true"
