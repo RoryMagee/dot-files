@@ -51,6 +51,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 call plug#end()
 
+
 filetype plugin indent on 
 
 if executable('rg')
