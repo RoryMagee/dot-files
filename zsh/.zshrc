@@ -44,13 +44,10 @@ if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nvim'
  fi
 
-alias v="nvim"
-alias cya="sudo poweroff"
 alias dkr="docker"
 alias dkrc="docker-compose"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 alias sleep="systemctl suspend"
-alias weather="curl http://wttr.in/newry"
 
 function chpwd() {
     emulate -L zsh
