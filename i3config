@@ -196,8 +196,8 @@ bindsym $mod+shift+x exec i3lock
 exec xrandr --output DVI-I-0 --off --output DVI-I-1 --mode 1920x1080 --rate 144 --pos 0x0 --rotate normal --output HDMI-0 --off --output DP-0 --off --output DP-1 --off --output DVI-D-0 --primary --mode 1920x1080 --rate 144 --pos 1920x0 --rotate normal
 
 # bind to move workspace between monitor
-bindsym $mod+Ctrl+greater move workspace to output right
-bindsym $mod+Ctrl+less move workspace to output left
+bindsym $mod+Ctrl+l move workspace to output right
+bindsym $mod+Ctrl+h move workspace to output left
 
 # focus window on activation
 focus_on_window_activation smart
