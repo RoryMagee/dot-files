@@ -44,6 +44,7 @@ if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nvim'
  fi
 
+alias vim="nvim"
 alias dkr="docker"
 alias dkrc="docker-compose"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
