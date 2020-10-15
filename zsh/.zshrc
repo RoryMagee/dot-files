@@ -52,5 +52,5 @@ alias sleep="systemctl suspend"
 
 function chpwd() {
     emulate -L zsh
-    ls -a
+    ls -a 
 }
