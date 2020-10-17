@@ -7,6 +7,8 @@ CASE_SENSITIVE="false"
 
 COMPLETION_WAITING_DOTS="true"
 
+unsetopt autocd
+
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
@@ -34,8 +36,8 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-#source ~/dot-files/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source ~/dot-files/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/dot-files/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/dot-files/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
