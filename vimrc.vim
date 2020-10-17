@@ -73,9 +73,6 @@ let g:airline_powerline_fonts = 1
 let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
 
-" Give ejs files javascript hightlighting
-au BufNewFile,BufRead *.ejs set filetype=js
-
 let g:ale_linters = {
 \ 'cs': ['OmniSharp']
 \}
