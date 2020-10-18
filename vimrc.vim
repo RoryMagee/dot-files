@@ -156,4 +156,9 @@ fun! CSharp()
     nnoremap <buffer> <Leader>gf :OmniSharpFixUsings<CR>
 endfun
 
+fun! Yml()
+    setlocal cursorcolumn
+endfun
+
 autocmd FileType cs :call CSharp()
+autocmd FileType yml,yaml :call Yml()
