@@ -153,3 +153,4 @@ fun! CSharp()
 endfun
 
 autocmd FileType cs :call CSharp()
+autocmd FileType yml,yaml :setlocal cursorcolumn
