@@ -16,8 +16,23 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source ~/dot-files/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/dot-files/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Plugins section
+#
+#source ~/dot-files/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source ~/dot-files/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source $HOME/.zplug/init.zsh
+zplug "zsh-users/zsh-autosuggestions" 
+zplug "zsh-users/zsh-syntax-highlighting" 
+
+if ! zplug check --verbose; then
+    printf "Install [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+zplug load
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
