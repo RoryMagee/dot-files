@@ -8,7 +8,6 @@ CASE_SENSITIVE="false"
 COMPLETION_WAITING_DOTS="true"
 
 unsetopt autocd
-ZSH_CUSTOM=$HOME/dot-files/zsh/plugins/
 
 plugins=(
     git
@@ -18,20 +17,20 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Plugins section
-#
-#source ~/dot-files/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source ~/dot-files/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source $HOME/.zplug/init.zsh
 zplug "zsh-users/zsh-autosuggestions" 
 zplug "zsh-users/zsh-syntax-highlighting" 
 
+# Install plugins if they aren't already installed
 if ! zplug check --verbose; then
     printf "Install [y/N]: "
     if read -q; then
         echo; zplug install
     fi
 fi
+
+# Load plugins
 zplug load
 
 # Preferred editor for local and remote sessions
