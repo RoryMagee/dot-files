@@ -116,7 +116,7 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
+set $ws9 "9: Discord"
 set $ws10 "10: Spotify"
 
 # switch to workspace
@@ -144,6 +144,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9 workspace number $w
 bindsym $mod+Shift+0 move container to workspace number $ws10 workspace number $ws10
 
 for_window [class="Spotify"] move to workspace $ws10
+for_window [class="discord"] move to workspace $ws9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -188,6 +189,7 @@ bar {
 
 # automatically open spotify, chrome and terminal
 exec spotify
+exec discord
 
 # bind for locking desktop
 bindsym $mod+shift+x exec i3lock
