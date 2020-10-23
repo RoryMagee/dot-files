@@ -58,7 +58,6 @@ endif
 
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS = '--reverse'
-" let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 let mapleader = " "
 let g:netrw_browse_split=2
@@ -74,9 +73,6 @@ let g:airline_powerline_fonts = 1
 
 let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
-
-" Give ejs files javascript hightlighting
-au BufNewFile,BufRead *.ejs set filetype=js
 
 let g:ale_linters = {
 \ 'cs': ['OmniSharp']
