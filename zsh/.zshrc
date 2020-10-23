@@ -18,7 +18,14 @@ source $ZSH/oh-my-zsh.sh
 
 # Plugins section
 
-source $HOME/.zplug/init.zsh
+# Update zplug home for mac os
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    export ZPLUG_HOME=/usr/local/opt/zplug
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    export ZPLUG_HOME=$HOME/zplug
+fi
+
+source $ZPLUG_HOME/init.zsh
 zplug "zsh-users/zsh-autosuggestions" 
 zplug "zsh-users/zsh-syntax-highlighting" 
 
