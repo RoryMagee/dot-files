@@ -21,9 +21,7 @@ source $ZSH/oh-my-zsh.sh
 # Update zplug home for mac os
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export ZPLUG_HOME=/usr/local/opt/zplug
-    echo "OSTYPE: MacOS"
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    echo "OSTYPE: Linux"
     export ZPLUG_HOME=$HOME/.zplug
 fi
 
