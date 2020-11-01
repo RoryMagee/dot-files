@@ -27,6 +27,7 @@ set incsearch
 set colorcolumn=80
 set updatetime=50
 set previewheight=5
+set nocompatible
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
@@ -48,6 +49,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 filetype plugin indent on 
