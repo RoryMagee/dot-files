@@ -31,6 +31,7 @@ set nocompatible
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
+Plug 'szw/vim-maximizer'
 Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'leafgarland/typescript-vim'
@@ -79,6 +80,9 @@ autocmd FileType html,css EmmetInstall
 let g:ale_linters = {
 \ 'cs': ['OmniSharp']
 \}
+
+" Vim Maximizer binding
+nnoremap <leader>m :MaximizerToggle<CR>
 
 "Pane navigation
 nnoremap <leader>h :wincmd h<CR>
