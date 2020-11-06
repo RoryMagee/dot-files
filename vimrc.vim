@@ -134,10 +134,6 @@ nnoremap <Leader>s :wa<CR>
 "HTML Skip Line
 nnoremap <Leader><CR> i<CR><Esc>O 
 
-"Insert Blank Line Below/Above
-nnoremap <Leader>o o<Esc>k
-nnoremap <Leader>O O<Esc>j
-
 "jj to escape insert mode
 inoremap jj <esc>
 inoremap jk <esc>
