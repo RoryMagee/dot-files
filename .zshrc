@@ -12,6 +12,7 @@ unsetopt autocd
 plugins=(
     git
     docker
+    npm
 )
 
 source $ZSH/oh-my-zsh.sh
