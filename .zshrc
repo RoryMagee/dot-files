@@ -12,6 +12,9 @@ unsetopt autocd
 plugins=(
     git
     docker
+    npm
+    ng
+    tmux
 )
 
 source $ZSH/oh-my-zsh.sh

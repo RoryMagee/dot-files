@@ -81,6 +81,7 @@ let g:ale_linters = {
 \ 'cs': ['OmniSharp']
 \}
 
+
 " Vim Maximizer binding
 nnoremap <leader>m :MaximizerToggle<CR>
 
