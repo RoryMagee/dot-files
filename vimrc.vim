@@ -98,6 +98,7 @@ nnoremap <C-p> :Files<CR>
 
 "Open NERDTree
 nnoremap <leader>pv :NERDTreeToggle<CR>
+nnoremap <leader>ppv :NERDTreeFind<CR>
 
 "RipGrep
 nnoremap <leader>ps :Rg<SPACE>
