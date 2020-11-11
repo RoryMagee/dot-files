@@ -43,7 +43,8 @@ Plug 'mattn/emmet-vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'dense-analysis/ale', {'for': 'cs'}
+ Plug 'dense-analysis/ale', {'for': 'cs'}
+"Plug 'dense-analysis/ale'
 Plug 'kana/vim-fakeclip'
 Plug 'valloric/matchtagalways'
 Plug 'tpope/vim-dispatch'
