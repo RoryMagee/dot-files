@@ -31,6 +31,7 @@ set nocompatible
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'szw/vim-maximizer'
 Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
