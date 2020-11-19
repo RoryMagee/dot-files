@@ -43,7 +43,7 @@ Plug 'mattn/emmet-vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
- Plug 'dense-analysis/ale', {'for': 'cs'}
+Plug 'dense-analysis/ale', {'for': 'cs'}
 "Plug 'dense-analysis/ale'
 Plug 'kana/vim-fakeclip'
 Plug 'valloric/matchtagalways'
@@ -158,4 +158,4 @@ fun! CSharp()
 endfun
 
 autocmd FileType cs :call CSharp()
-autocmd FileType yaml,yml setlocal cursorcolumn
+autocmd FileType yaml,yml :setlocal cursorcolumn
