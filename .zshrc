@@ -53,7 +53,6 @@ if [[ -n $SSH_CONNECTION ]]; then
 alias vim="nvim"
 alias dkr="docker"
 alias dkrc="docker-compose"
-alias dkrclean="docker volume rm $(docker volume ls -qf dangling=true)"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 alias sleep="systemctl suspend"
 alias rgf="rg --files | rg"
