@@ -52,7 +52,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 filetype plugin indent on 
