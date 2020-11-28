@@ -151,7 +151,12 @@ bindsym $mod+r mode "resize"
 bar {
         position bottom
         status_command i3status
+        colors {
+            focused_workspace  #FFFFFF #AF59BE #FFFFFF
+        }
 }
+
+# AF59BE
 
 # automatically open spotify, chrome and terminal
 exec spotify
@@ -178,4 +183,7 @@ hide_edge_borders both
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPrev exec playerctl previou
+
+# Title bar color
+client.focused #AF59BE #AF59BE #ffffff #2e9ef4 #285577
