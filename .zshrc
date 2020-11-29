@@ -50,6 +50,7 @@ if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nvim'
  fi
 
+alias sudo="sudo "
 alias vim="nvim"
 alias dkr="docker"
 alias dkrc="docker-compose"
