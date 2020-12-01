@@ -141,6 +141,10 @@ nnoremap <Leader><CR> i<CR><Esc>O
 inoremap jj <esc>
 inoremap jk <esc>
 
+"Delete Selection
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+
 "Reload vimrc
 nnoremap <leader>rl :source ~/.config/nvim/init.vim <CR>
 
