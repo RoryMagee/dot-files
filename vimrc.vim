@@ -44,15 +44,13 @@ Plug 'mattn/emmet-vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'dense-analysis/ale', {'for': 'cs'}
-"Plug 'dense-analysis/ale'
-Plug 'kana/vim-fakeclip'
+Plug 'dense-analysis/ale', {'for': 'cs go'}
 Plug 'valloric/matchtagalways'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-"Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 filetype plugin indent on 
@@ -121,9 +119,10 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap  <silent><expr> <C-space> coc#refresh()
 
 "Vim Fugitive Keybindings
-nmap <leader>gl :diffget //3<CR>
 nmap <leader>gs :diffget //2<CR>
+nmap <leader>gl :diffget //3<CR>
 nmap <leader>ga :G<CR>
+"Press dv to open merge conflicts
 nmap <leader>gca :Gcommit -v -a<CR>
 nmap <leader>gp :Gpush<CR>
 
