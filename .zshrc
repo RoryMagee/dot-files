@@ -51,6 +51,7 @@ if [[ -n $SSH_CONNECTION ]]; then
  fi
 
 alias sudo="sudo "
+alias ccc="xclip -sel clip"
 alias vim="nvim"
 alias dkr="docker"
 alias dkrc="docker-compose"
