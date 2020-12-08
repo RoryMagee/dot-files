@@ -24,8 +24,14 @@ source $ZSH/oh-my-zsh.sh
 # Update zplug home for mac os
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export ZPLUG_HOME=/usr/local/opt/zplug
+    
+    # MacOS specific aliases
+    alias ccc="pbpaste"
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export ZPLUG_HOME=$HOME/.zplug
+
+    # *nix specific aliase
+    alias ccc="xclip -sel clip -o"
 fi
 
 source $ZPLUG_HOME/init.zsh
@@ -51,12 +57,10 @@ if [[ -n $SSH_CONNECTION ]]; then
  fi
 
 alias sudo="sudo "
-alias ccc="xclip -sel clip"
 alias vim="nvim"
 alias dkr="docker"
 alias dkrc="docker-compose"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
-alias sleep="systemctl suspend"
 alias rgf="rg --files | rg"
 
 function chpwd() {
