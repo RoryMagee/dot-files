@@ -106,14 +106,14 @@ nnoremap <silent> <Leader>= :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
 function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col-1] =~# '\s'
+let col = col('.') - 1
+return !col || getline('.')[col-1] =~# '\s'
 endfunction
 
 inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ coc#refresh()
+        \ pumvisible() ? "\<C-n>" :
+        \ <SID>check_back_space() ? "\<TAB>" :
+        \ coc#refresh()
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap  <silent><expr> <C-space> coc#refresh()
@@ -140,9 +140,13 @@ nnoremap <Leader><CR> i<CR><Esc>O
 inoremap jj <esc>
 inoremap jk <esc>
 
-"Delete Selection
+" Copy/Paste Commands
 nnoremap <leader>d "_d
-xnoremap <leader>d "_d
+vnoremap <leader>d "_d
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y gg"+yG
+nnoremap <leader>q "+p
 
 "Reload vimrc
 nnoremap <leader>rl :source ~/.config/nvim/init.vim <CR>
