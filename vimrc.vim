@@ -47,7 +47,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'dense-analysis/ale', {'for': 'cs'}
 Plug 'valloric/matchtagalways'
 Plug 'tpope/vim-dispatch'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'

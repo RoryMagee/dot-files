@@ -23,15 +23,20 @@ source $ZSH/oh-my-zsh.sh
 
 # Update zplug home for mac os
 if [[ "$OSTYPE" == "darwin"* ]]; then
+
     export ZPLUG_HOME=/usr/local/opt/zplug
+    export COMPOSE_HTTP_TIMEOUT=200
     
     # MacOS specific aliases
     alias ccc="pbpaste"
+
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+
     export ZPLUG_HOME=$HOME/.zplug
 
-    # *nix specific aliase
+    # *nix specific aliases
     alias ccc="xclip -sel clip -o"
+
 fi
 
 source $ZPLUG_HOME/init.zsh
@@ -57,7 +62,6 @@ if [[ -n $SSH_CONNECTION ]]; then
  fi
 
 alias sudo="sudo "
-alias vim="nvim"
 alias dkr="docker"
 alias dkrc="docker-compose"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
