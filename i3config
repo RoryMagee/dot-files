@@ -156,8 +156,6 @@ bar {
         }
 }
 
-# AF59BE
-
 # automatically open spotify, chrome and terminal
 exec spotify
 
@@ -187,3 +185,6 @@ bindsym XF86AudioPrev exec playerctl previou
 
 # Title bar color
 client.focused #AF59BE #AF59BE #ffffff #2e9ef4 #285577
+
+# Screenshot
+bindsym Control+Print exec gnome-screenshot -i
