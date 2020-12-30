@@ -35,7 +35,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export ZPLUG_HOME=$HOME/.zplug
 
     # *nix specific aliases
-    alias ccc="xclip -sel clip -o"
+    alias ccc="xclip -sel clip"
 
 fi
 
