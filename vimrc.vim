@@ -93,8 +93,8 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 "Helpful Ish
-nnoremap <leader>nf :e %:h/
 nnoremap <C-p> :Files<CR>
+nnoremap <leader>rn :Rename 
 
 "Open NERDTree
 nnoremap <leader>pv :NERDTreeToggle<CR>
