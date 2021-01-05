@@ -10,8 +10,8 @@ set belloff=all
 set autoread
 set noerrorbells
 set tabstop=4 softtabstop=4
-set nohlsearch
 set shiftwidth=4
+set nohlsearch
 set expandtab 
 set hidden
 set autoindent
@@ -50,9 +50,11 @@ Plug 'tpope/vim-dispatch'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
+Plug 'reekenx/vim-rename2'
 call plug#end()
 
 filetype plugin indent on 
+filetype indent on 
 
 if executable('rg')
     let g:rg_derive_root='true'
