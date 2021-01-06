@@ -127,6 +127,8 @@ nmap <leader>ga :G<CR>
 "Press dv to open merge conflicts
 nmap <leader>gca :Gcommit -v -a<CR>
 nmap <leader>gp :Gpush<CR>
+nmap <leader>gbr :GBrowse<CR>
+nmap <leader>gbl :Git blame<CR>
 
 "Tab Navigation
 nnoremap H gT
