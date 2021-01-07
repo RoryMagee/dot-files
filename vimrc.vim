@@ -83,10 +83,6 @@ let g:ale_linters = {
 \ 'cs': ['OmniSharp']
 \}
 
-
-" Vim Maximizer binding
-nnoremap <leader>m :MaximizerToggle<CR>
-
 "Pane navigation
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -95,7 +91,9 @@ nnoremap <leader>l :wincmd l<CR>
 
 "Helpful Ish
 nnoremap <C-p> :Files<CR>
+nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>rn :Rename 
+nnoremap <leader>rln :set invrelativenumber<CR>
 
 "Open NERDTree
 nnoremap <leader>pv :NERDTreeToggle<CR>
@@ -103,6 +101,7 @@ nnoremap <leader>ppv :NERDTreeFind<CR>
 
 "RipGrep
 nnoremap <leader>ps :Rg<SPACE>
+"
 "Resize panes 
 nnoremap <silent> <Leader>= :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
