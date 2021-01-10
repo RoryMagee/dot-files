@@ -64,7 +64,7 @@ fi
 cht() {
     if [ "$1" != "" ] && [ "$2" != "" ]
     then 
-        curl cheat.sh/$1/$2
+        curl cheat.sh/$1/$(tr ' ' '+'<<<$2)
     else
         echo "Invalid args"
     fi
