@@ -30,12 +30,30 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # MacOS specific aliases
     alias ccc="pbpaste"
 
+    fnr() {
+        if [ "$1" != "" ] && [ "$2" != "" ]
+        then
+            rg $1 --files-with-matches | xargs sed -i '' "s/\\$1/$2/g"
+        else
+            echo "Invalid args"
+        fi
+    }
+
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
     export ZPLUG_HOME=$HOME/.zplug
 
     # *nix specific aliases
     alias ccc="xclip -sel clip"
+    fnr() {
+        echo "gnu"
+        if [ "$1" != "" ] && [ "$2" != "" ]
+        then
+            rg $1 --files-with-matches | xargs sed -i "s/\\$1/$2/g"
+        else
+            echo "Invalid args"
+        fi
+    }
 
 fi
 
@@ -70,14 +88,6 @@ cht() {
     fi
 }
 
-fnr() {
-    if [ "$1" != "" ] && [ "$2" != "" ]
-    then
-        rg $1 --files-with-matches | xargs sed -i '' "s/\\$1/$2/g"
-    else
-        echo "Invalid args"
-    fi
-}
 
 alias sudo="sudo "
 alias dkr="docker"
