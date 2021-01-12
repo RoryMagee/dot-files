@@ -70,6 +70,15 @@ cht() {
     fi
 }
 
+fnr() {
+    if [ "$1" != "" ] && [ "$2" != "" ]
+    then
+        rg $1 --files-with-matches | xargs sed -i '' "s/\\$1/$2/g"
+    else
+        echo "Invalid args"
+    fi
+}
+
 alias sudo="sudo "
 alias dkr="docker"
 alias dkrc="docker-compose"
