@@ -46,7 +46,6 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # *nix specific aliases
     alias ccc="xclip -sel clip"
     fnr() {
-        echo "gnu"
         if [ "$1" != "" ] && [ "$2" != "" ]
         then
             rg $1 --files-with-matches | xargs sed -i "s/\\$1/$2/g"
