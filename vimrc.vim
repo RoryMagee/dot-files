@@ -11,7 +11,6 @@ set autoread
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-set smartindent
 set nohlsearch
 set expandtab 
 set hidden
