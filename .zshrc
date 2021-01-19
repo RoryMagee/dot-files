@@ -93,6 +93,8 @@ alias dkr="docker"
 alias dkrc="docker-compose"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 alias rgf="rg --files | rg"
+alias docker-clean='docker volume rm $(docker volume ls -qf dangling=true)'
+
 
 function chpwd() {
     emulate -L zsh
