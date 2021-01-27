@@ -94,7 +94,7 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <C-p> :Files<CR>
 nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>rn :Rename 
-nnoremap <leader>rln :tabdo windo set invrelativenumber<CR>
+nnoremap <leader>rln :set invrelativenumber<CR>
 
 "Open NERDTree
 nnoremap <leader>pv :NERDTreeToggle<CR>
