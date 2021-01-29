@@ -27,9 +27,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export ZPLUG_HOME=/usr/local/opt/zplug
     export COMPOSE_HTTP_TIMEOUT=200
     
-    # MacOS specific aliases
-    alias ccc="pbpaste"
-
     fnr() {
         if [ "$1" != "" ] && [ "$2" != "" ]
         then
