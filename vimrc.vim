@@ -38,7 +38,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'leafgarland/typescript-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile', 'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'OmniSharp/omnisharp-vim'
@@ -81,7 +81,8 @@ let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
 
 let g:ale_linters = {
-\ 'cs': ['OmniSharp']
+\ 'cs': ['OmniSharp'],
+\ 'javascript': ['eslint']
 \}
 
 "Pane navigation
