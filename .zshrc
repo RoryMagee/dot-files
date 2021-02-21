@@ -75,16 +75,6 @@ if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nvim'
 fi
 
-cht() {
-    if [ "$1" != "" ] && [ "$2" != "" ]
-    then 
-        curl cheat.sh/$1/$(tr ' ' '+'<<<$2)
-    else
-        echo "Invalid args"
-    fi
-}
-
-
 alias sudo="sudo "
 alias dkr="docker"
 alias dkrc="docker-compose"
