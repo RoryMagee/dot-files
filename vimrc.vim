@@ -34,6 +34,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'szw/vim-maximizer'
 Plug 'morhetz/gruvbox'
+Plug 'puremourning/vimspector'
 Plug 'jremmen/vim-ripgrep'
 Plug 'leafgarland/typescript-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -76,12 +77,13 @@ let g:OmniSharp_highlighting = 3
 let g:OmniSharp_timeout = 5
 let g:airline_powerline_fonts = 1
 let g:typescript_indent_disable = 1
+let g:vimspector_enable_mappings='HUMAN'
 
 let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
 
 let g:ale_linters = {
-\ 'cs': ['OmniSharp']
+\ 'cs': ['OmniSharp'],
 \}
 
 "Pane navigation
@@ -159,6 +161,18 @@ nmap  <leader>gd <Plug>(coc-definition)
 nmap  <leader>gr <Plug>(coc-references)
 nmap <leader>gf <Plug>(coc-fix-current)
 nnoremap  <leader>cr :CocRestart<CR>
+
+" Vimspector Remaps
+nnoremap <leader>dd :call vimspector#Launch()<CR>
+nnoremap <leader>de :call vimspector#Reset()<CR>
+nnoremap <leader>dc :call vimspector#Continue()<CR>
+nmap <leader>dl <Plug>VimspectorStepInto
+nmap <leader>dj <Plug>VimspectorStepOver
+nmap <leader>dk <Plug>VimspectorStepOut
+nmap <leader>d_ <Plug>VimspectorRestart
+nmap <leader>drc <Plug>VimspectorRunToCursor
+nmap <leader>dbp <Plug>VimspectorToggleBreakpoint
+nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
 
 fun! CSharp()
     setlocal ts=2 sts=2 sw=2
