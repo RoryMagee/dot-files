@@ -77,7 +77,6 @@ let g:OmniSharp_highlighting = 3
 let g:OmniSharp_timeout = 5
 let g:airline_powerline_fonts = 1
 let g:typescript_indent_disable = 1
-let g:vimspector_enable_mappings='HUMAN'
 
 let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
