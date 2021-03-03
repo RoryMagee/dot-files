@@ -31,6 +31,10 @@ set nocompatible
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'szw/vim-maximizer'
 Plug 'morhetz/gruvbox'
@@ -93,7 +97,8 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 "Helpful Ish
-nnoremap <C-p> :Files<CR>
+"nnoremap <C-p> :Files<CR>
+nnoremap <C-p> <cmd>Telescope find_files<CR>
 nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>rn :Rename 
 nnoremap <leader>rln :set invrelativenumber<CR>
