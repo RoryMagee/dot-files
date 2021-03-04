@@ -21,7 +21,7 @@ set splitright
 set smartcase
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
+set undodir=~/.vim/nvim-undo
 set undofile
 set incsearch
 set colorcolumn=80
@@ -29,6 +29,7 @@ set updatetime=50
 set previewheight=5
 set nocompatible
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+
 
 call plug#begin('~/.vim/plugged')
 Plug 'nvim-lua/popup.nvim'
@@ -96,8 +97,8 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 "Helpful Ish
-nnoremap <C-p> :Files<CR>
-"nnoremap <C-p> <cmd>Telescope find_files<CR>
+"nnoremap <C-p> :Files<CR>
+nnoremap <C-p> <cmd>Telescope find_files<CR>
 nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>rn :Rename 
 nnoremap <leader>rln :set invrelativenumber<CR>
