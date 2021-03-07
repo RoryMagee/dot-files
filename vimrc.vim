@@ -132,8 +132,8 @@ nmap <leader>gs :diffget //2<CR>
 nmap <leader>gl :diffget //3<CR>
 nmap <leader>ga :G<CR>
 "Press dv to open merge conflicts
-nmap <leader>gca :Gcommit -v -a<CR>
-nmap <leader>gp :Gpush<CR>
+nmap <leader>gca :Git commit -v -a<CR>
+nmap <leader>gp :Git push<CR>
 nmap <leader>gbr :GBrowse<CR>
 nmap <leader>gbl :Git blame<CR>
 
