@@ -97,9 +97,8 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 "Helpful Ish
-"nnoremap <C-p> :Files<CR>
 nnoremap <leader>ps <cmd>Telescope live_grep<cr>
-nnoremap <C-p> <cmd>Telescope find_files<CR>
+nnoremap <C-p> :lua require('telescope.builtin').git_files()<cr>
 nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>rn :Rename 
 nnoremap <leader>rln :set invrelativenumber<CR>
