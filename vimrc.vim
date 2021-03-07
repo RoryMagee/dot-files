@@ -98,6 +98,7 @@ nnoremap <leader>l :wincmd l<CR>
 
 "Helpful Ish
 "nnoremap <C-p> :Files<CR>
+nnoremap <leader>ps <cmd>Telescope live_grep<cr>
 nnoremap <C-p> <cmd>Telescope find_files<CR>
 nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>rn :Rename 
@@ -108,7 +109,7 @@ nnoremap <leader>pv :NERDTreeToggle<CR>
 nnoremap <leader>ppv :NERDTreeFind<CR>
 
 "RipGrep
-nnoremap <leader>ps :Rg<SPACE>
+"nnoremap <leader>ps :Rg<SPACE>
 "
 "Resize panes 
 nnoremap <silent> <Leader>= :vertical resize +5<CR>
