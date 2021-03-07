@@ -1,4 +1,4 @@
-syntax on
+syntax on 
 set number
 set relativenumber
 set guicursor=
@@ -97,8 +97,8 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 "Helpful Ish
-nnoremap <C-p> :Files<CR>
-"nnoremap <C-p> <cmd>Telescope find_files<CR>
+"nnoremap <C-p> :Files<CR>
+nnoremap <C-p> <cmd>Telescope find_files<CR>
 nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>rn :Rename 
 nnoremap <leader>rln :set invrelativenumber<CR>
@@ -209,7 +209,7 @@ require('telescope').setup{
     entry_prefix = "  ",
     initial_mode = "insert",
     selection_strategy = "reset",
-    sorting_strategy = "descending",
+    sorting_strategy = "ascending",
     layout_strategy = "horizontal",
     layout_defaults = {
       horizontal = {
