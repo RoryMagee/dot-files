@@ -1,0 +1,20 @@
+{
+    "configurations": {
+        "basic-node": {
+            "adapter": "vscode-node",
+            "breakpoints": {
+                "exception": {
+                    "all": "N",
+                    "uncaught": "Y"
+                }
+            },
+            "configuration": {
+                "request": "launch",
+                "protocol": "auto",
+                "stopOnEntry": true,
+                "console": "integratedTerminal",
+                "program": "${PWD}/${filename}"
+            }
+        }
+    }
+}
