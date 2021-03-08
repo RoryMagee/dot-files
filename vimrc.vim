@@ -100,7 +100,7 @@ nnoremap <C-j> :cnext<CR>
 nnoremap <leader>' :copen<CR>
 
 "Helpful Ish
-nnoremap <leader>ps <cmd>Telescope live_grep<cr>
+nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 nnoremap <C-p> :lua require('telescope.builtin').git_files()<cr>
 nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>rn :Rename 
@@ -110,9 +110,6 @@ nnoremap <leader>rln :set invrelativenumber<CR>
 nnoremap <leader>pv :NERDTreeToggle<CR>
 nnoremap <leader>ppv :NERDTreeFind<CR>
 
-"RipGrep
-"nnoremap <leader>ps :Rg<SPACE>
-"
 "Resize panes 
 nnoremap <silent> <Leader>= :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
@@ -165,6 +162,7 @@ nnoremap <leader>q "+p
 "Reload vimrc
 nnoremap <leader>rl :source ~/.config/nvim/init.vim <CR>
 
+"Coc
 nmap  <leader>gd <Plug>(coc-definition)
 nmap  <leader>gr <Plug>(coc-references)
 nmap <leader>gf <Plug>(coc-fix-current)
