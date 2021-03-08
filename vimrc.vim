@@ -97,6 +97,7 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <C-k> :cprev<CR>
 nnoremap <C-j> :cnext<CR>
+nnoremap <leader>' :copen<CR>
 
 "Helpful Ish
 nnoremap <leader>ps <cmd>Telescope live_grep<cr>
