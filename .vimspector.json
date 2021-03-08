@@ -25,7 +25,20 @@
       }
         },
         "express": {
-
+            "adapter": "vscode-node",
+            "breakpoints": {
+                "exception": {
+                    "all": "N",
+                    "uncaught": "Y"
+                }
+            },
+            "configuration": {
+                "name": "Attach to express application",
+                "type": "node",
+                "request": "attach",
+                "skipFiles": ["<node_internals>/**/*.js"],
+                "processId": "${processId}"
+            }
         },
         "ts": {
             "adapter": "vscode-node",
