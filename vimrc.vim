@@ -90,11 +90,13 @@ let g:ale_linters = {
 \ 'cs': ['OmniSharp'],
 \}
 
-"Pane navigation
+"Navigation
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
+nnoremap <C-k> :cprev<CR>
+nnoremap <C-j> :cnext<CR>
 
 "Helpful Ish
 nnoremap <leader>ps <cmd>Telescope live_grep<cr>
