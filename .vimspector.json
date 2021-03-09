@@ -37,7 +37,7 @@
             "breakpoints": {
                 "exception": {
                     "all": "N",
-                    "uncaught": "Y"
+                    "uncaught": "N"
                 }
             },
             "configuration": {
@@ -47,6 +47,21 @@
                 "console": "integratedTerminal",
                 "program": "${PWD}/out/${filename}",
                 "cwd": "${PWD}"
+            }
+        },
+        "ts-express": {
+            "adapter": "vscode-node",
+            "breakpoints": {
+                "exception": {
+                    "all": "N",
+                    "uncaught": "Y"
+                }
+            },
+            "configuration": {
+                "request": "attach",
+                "console": "integratedTerminal",
+                "skipFiles": ["<node_internals>/**/*.js"],
+                "processId": "${processId}"
             }
         }
     }
