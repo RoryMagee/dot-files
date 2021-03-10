@@ -103,6 +103,7 @@ nnoremap <leader>' :copen<CR>
 "Helpful Ish
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 nnoremap <C-p> :lua require('telescope.builtin').git_files()<cr>
+nnoremap <C-o> :lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>rn :Rename 
 nnoremap <leader>rln :set invrelativenumber<CR>
@@ -197,6 +198,7 @@ lua << EOF
 local actions = require('telescope.actions')
 require('telescope').setup{
   defaults = {
+    file_sorter = require('telescope.sorters').get_fzy_sorter,
     vimgrep_arguments = {
       'rg',
       '--color=never',
@@ -251,6 +253,14 @@ require('telescope').setup{
 
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
+  },
+  extensions = {
+  fzy_native = {
+        override_generic_sorter = false,
+        override_file_sorter = true
+    }
   }
 }
+
+require('telescope').load_extension('fzy_native')
 EOF

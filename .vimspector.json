@@ -1,6 +1,6 @@
 {
     "configurations": {
-        "basic-node": {
+        "node": {
             "adapter": "vscode-node",
             "breakpoints": {
                 "exception": {
@@ -15,14 +15,6 @@
                 "console": "integratedTerminal",
                 "program": "${PWD}/${filename}"
             }
-        },
-        "chrome": {
-            "adapter": "chrome",
-            "configuration": {
-                "request": "launch",
-                "url": "http://localhost:4200/",
-                "webRoot": "${PWD}/dist/index.html"
-      }
         },
         "express": {
             "adapter": "vscode-node",
@@ -45,7 +37,7 @@
             "breakpoints": {
                 "exception": {
                     "all": "N",
-                    "uncaught": "Y"
+                    "uncaught": "N"
                 }
             },
             "configuration": {
@@ -55,6 +47,21 @@
                 "console": "integratedTerminal",
                 "program": "${PWD}/out/${filename}",
                 "cwd": "${PWD}"
+            }
+        },
+        "ts-express": {
+            "adapter": "vscode-node",
+            "breakpoints": {
+                "exception": {
+                    "all": "N",
+                    "uncaught": "Y"
+                }
+            },
+            "configuration": {
+                "request": "attach",
+                "console": "integratedTerminal",
+                "skipFiles": ["<node_internals>/**/*.js"],
+                "processId": "${processId}"
             }
         }
     }
