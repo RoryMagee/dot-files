@@ -56,6 +56,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-dadbod'
 Plug 'sheerun/vim-polyglot'
 Plug 'reekenx/vim-rename2'
 call plug#end()
