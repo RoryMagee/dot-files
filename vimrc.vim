@@ -174,6 +174,7 @@ nnoremap  <leader>cr :CocRestart<CR>
 nnoremap <leader>dd :call vimspector#Launch()<CR>
 nnoremap <leader>de :call vimspector#Reset()<CR>
 nnoremap <leader>dc :call vimspector#Continue()<CR>
+nnoremap <leader>ds :call vimspector#Stop()<CR>
 nmap <leader>dl <Plug>VimspectorStepInto
 nmap <leader>dj <Plug>VimspectorStepOver
 nmap <leader>dk <Plug>VimspectorStepOut
