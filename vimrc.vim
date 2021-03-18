@@ -75,12 +75,10 @@ let mapleader = " "
 let g:netrw_browse_split=2
 let g:netrw_banner=0
 let g:netrw_winsize = 25
-let g:OmniSharp_server_stdio = 0 
 let g:OmniSharp_timeout = 5
 let g:OmniSharp_server_stdio = 1 
 let g:OmniSharp_start_without_solution = 1
 let g:OmniSharp_highlighting = 3
-let g:OmniSharp_timeout = 5
 let g:airline_powerline_fonts = 1
 let g:typescript_indent_disable = 1
 
