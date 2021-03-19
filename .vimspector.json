@@ -13,6 +13,10 @@
                 "protocol": "auto",
                 "stopOnEntry": true,
                 "console": "integratedTerminal",
+                "skipFiles": [
+                    "<node_internals>/**/*.js",
+                    "${PWD}/node_modules/**/*.js"
+                ],
                 "program": "${PWD}/${filename}"
             }
         },
