@@ -13,6 +13,10 @@
                 "protocol": "auto",
                 "stopOnEntry": true,
                 "console": "integratedTerminal",
+                "skipFiles": [
+                    "<node_internals>/**/*.js",
+                    "${PWD}/node_modules/**/*.js"
+                ],
                 "program": "${PWD}/${filename}"
             }
         },
@@ -62,6 +66,22 @@
                 "console": "integratedTerminal",
                 "skipFiles": ["<node_internals>/**/*.js"],
                 "processId": "${processId}"
+            }
+        },
+        "c#": {
+            "adapter": "netcoredbg",
+            "breakpoints": {
+                "exception": {
+                    "all": "N",
+                    "uncaught": "Y"
+                }
+            },
+            "configuration": {
+                "request": "launch",
+                "program": "${PWD}/bin/Debug/net5.0/${dll_location}",
+                "args": [],
+                "stopAtEntry": true,
+                "cwd": "${PWD}"
             }
         }
     }
