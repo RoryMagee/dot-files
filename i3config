@@ -163,8 +163,8 @@ exec spotify
 bindsym $mod+shift+x exec i3lock
 
 # xrandr commands
-# exec xrandr --output DVI-I-0 --off --output DVI-I-1 --mode 1920x1080 --rate 144 --pos 0x0 --rotate normal --output HDMI-0 --off --output DP-0 --off --output DP-1 --off --output DVI-D-0 --primary --mode 1920x1080 --rate 144 --pos 1920x0 --rotate normal
-exec xrandr --output DP-4 --mode 3440x1440 --rate 100 --rotate normal --output DVI-I-1 --off
+exec xrandr --output DVI-I-0 --off --output DVI-I-1 --mode 1920x1080 --rate 144 --pos 0x0 --rotate normal --output HDMI-0 --off --output DP-0 --off --output DP-1 --off --output DVI-D-0 --primary --mode 1920x1080 --rate 144 --pos 1920x0 --rotate normal
+# exec xrandr --output DP-4 --mode 3440x1440 --rate 100 --rotate normal --output DVI-I-1 --off
 
 # bind to move workspace between monitor
 bindsym $mod+Ctrl+l move workspace to output right
