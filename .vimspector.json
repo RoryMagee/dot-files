@@ -14,8 +14,8 @@
                 "stopOnEntry": true,
                 "console": "integratedTerminal",
                 "skipFiles": [
-                    "<node_internals>/**/*.js",
-                    "${PWD}/node_modules/**/*.js"
+                    "_vimspector_tmp/<node_internals>/**/*.js",
+                    "node_modules/**/*.js"
                 ],
                 "program": "${PWD}/${filename}"
             }
@@ -32,7 +32,11 @@
                 "name": "Attach to express application",
                 "type": "node",
                 "request": "attach",
-                "skipFiles": ["<node_internals>/**/*.js"],
+                "skipFiles": [
+                    "<node_internals>/**/*.js",
+                    "_vimspector_tmp/<node_internals>/**/*.js",
+                    "node_modules/**/*.js"
+                ],
                 "processId": "${processId}"
             }
         },
@@ -64,7 +68,10 @@
             "configuration": {
                 "request": "attach",
                 "console": "integratedTerminal",
-                "skipFiles": ["<node_internals>/**/*.js"],
+                "skipFiles": [
+                    "_vimspector_tmp/<node_internals>/**/*.js",
+                    "node_modules/**/*.js"
+                ],
                 "processId": "${processId}"
             }
         },
