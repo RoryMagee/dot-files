@@ -2,6 +2,7 @@ syntax on
 set number
 set relativenumber
 set guicursor=
+set mouse=a
 set laststatus=2
 set statusline=%f
 set noshowmode
