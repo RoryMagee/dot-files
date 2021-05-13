@@ -133,11 +133,15 @@ inoremap  <silent><expr> <C-space> coc#refresh()
 nmap <leader>gs :diffget //2<CR>
 nmap <leader>gl :diffget //3<CR>
 nmap <leader>ga :G<CR>
-nmap <leader>gds :Gdiffsplit!<CR>
 nmap <leader>gca :Git commit -v -a<CR>
 nmap <leader>gp :Git push<CR>
 nmap <leader>gbr :GBrowse<CR>
 nmap <leader>gbl :Git blame<CR>
+
+" Mergetool will add all merge conflicts to a qf list 
+" Diffsplit will open a split of the current file
+nmap <leader>gmt :Git mergetool<CR>
+nmap <leader>gds :Gdiffsplit!<CR>
 
 "Tab Navigation
 nnoremap H gT
