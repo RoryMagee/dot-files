@@ -60,7 +60,6 @@ alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 alias rgf="rg --files | rg"
 alias docker-clean='docker volume rm $(docker volume ls -qf dangling=true)'
 
-
 function chpwd() {
     emulate -L zsh
     ls -a 
