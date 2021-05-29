@@ -90,6 +90,15 @@
                 "stopAtEntry": true,
                 "cwd": "${PWD}"
             }
+        },
+        "go": {
+            "adapter": "vscode-go",
+            "configuration": {
+                "request": "launch",
+                "program": "${fileDirname}",
+                "mode": "debug",
+                "dlvToolPath": "$HOME/go/bin/dlv"
+            }
         }
     }
 }
