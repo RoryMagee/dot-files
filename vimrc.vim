@@ -166,6 +166,10 @@ vnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 nnoremap <leader>q "+p
 
+"Move Text
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 "Reload vimrc
 nnoremap <leader>rl :source ~/.config/nvim/init.vim <CR>
 
