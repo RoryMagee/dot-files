@@ -62,9 +62,11 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-dadbod'
 "Plug 'sheerun/vim-polyglot'
 Plug 'reekenx/vim-rename2'
+Plug 'towolf/vim-helm'
+Plug 'chrisbra/csv.vim'
 call plug#end()
 
-filetype plugin indent on 
+filetype plugin on 
 filetype indent on 
 
 if executable('rg')
@@ -154,9 +156,11 @@ nnoremap <Leader>s :wa<CR>
 "HTML Skip Line
 nnoremap <Leader><CR> i<CR><Esc>O 
 
-"jj to escape insert mode
+"Misc
 inoremap jj <esc>
 inoremap jk <esc>
+nnoremap n nzz
+nnoremap N Nzz
 
 " Copy/Paste Commands
 nnoremap <leader>d "_d
@@ -174,8 +178,9 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <leader>rl :source ~/.config/nvim/init.vim <CR>
 
 "Coc
-nmap  <leader>gd <Plug>(coc-definition)
-nmap  <leader>gr <Plug>(coc-references)
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gv :call CocAction('jumpDefinition', 'vsplit')<CR>
+nmap <leader>gr <Plug>(coc-references)
 nmap <leader>gf <Plug>(coc-fix-current)
 nnoremap  <leader>cr :CocRestart<CR>
 
@@ -201,8 +206,13 @@ fun! CSharp()
     nnoremap <buffer> <Leader>gf :OmniSharpFixUsings<CR>
 endfun
 
+fun! Yaml()
+    setlocal cursorcolumn
+    setlocal ts=2 sts=2 sw=2
+endfun
+
 autocmd FileType cs :call CSharp()
-autocmd FileType yaml,yml :setlocal cursorcolumn
+autocmd FileType yaml,yml :call Yaml()
 
 lua << EOF
 local actions = require('telescope.actions')

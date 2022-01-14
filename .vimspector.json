@@ -14,7 +14,7 @@
                 "stopOnEntry": true,
                 "console": "integratedTerminal",
                 "skipFiles": [
-                    "_vimspector_tmp/<node_internals>/**/*.js",
+                    "*/<node_internals>/**/*.js",
                     "node_modules/**/*.js"
                 ],
                 "program": "${PWD}/${filename}"
@@ -32,10 +32,10 @@
                 "name": "Attach to express application",
                 "type": "node",
                 "request": "attach",
+                "smartStep": true,
                 "skipFiles": [
-                    "<node_internals>/**/*.js",
-                    "_vimspector_tmp/<node_internals>/**/*.js",
-                    "node_modules/**/*.js"
+                    "${workspaceFolder}/node_modules/**/*.js",
+                    "<node_internals>/**/*.js"
                 ],
                 "processId": "${processId}"
             }
@@ -69,7 +69,7 @@
                 "request": "attach",
                 "console": "integratedTerminal",
                 "skipFiles": [
-                    "_vimspector_tmp/<node_internals>/**/*.js",
+                    "*/<node_internals>/**/*.js",
                     "node_modules/**/*.js"
                 ],
                 "processId": "${processId}"
@@ -98,6 +98,16 @@
                 "program": "${fileDirname}",
                 "mode": "debug",
                 "dlvToolPath": "$HOME/go/bin/dlv"
+            }
+        },
+        "go-test": {
+            "adapter": "vscode-go",
+            "configuration": {
+                "request": "launch",
+                "program": "${file}",
+                "mode": "test",
+                "dlvToolPath": "$HOME/go/bin/dlv",
+                "showLog": true
             }
         }
     }
