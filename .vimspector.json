@@ -1,11 +1,35 @@
 {
     "configurations": {
+        "mocha": {
+            "adapter": "vscode-node",
+            "breakpoints": {
+                "exception": {
+                    "all": "N",
+                    "uncaught": "N"
+                }
+            },
+            "configuration": {
+                "skipFiles": [
+                    "*/<node_internals>/**/*.js",
+                    "node_modules/**/*.js"
+                ],
+                "stopOnEntry": false,
+                "request": "launch",
+                "protocol": "auto",
+                "runtimeArgs": [
+                    "${PWD}/node_modules/.bin/mocha",
+                    "--inspect-brk",
+                    "${file}"
+                ],
+                "port": 9229
+            }
+        },
         "node": {
             "adapter": "vscode-node",
             "breakpoints": {
                 "exception": {
                     "all": "N",
-                    "uncaught": "Y"
+                    "uncaught": "N"
                 }
             },
             "configuration": {
@@ -24,7 +48,7 @@
             "adapter": "vscode-node",
             "breakpoints": {
                 "exception": {
-                    "all": "N",
+                    "all": "Y",
                     "uncaught": "Y"
                 }
             },
@@ -84,11 +108,11 @@
                 }
             },
             "configuration": {
-                "request": "launch",
-                "program": "${PWD}/bin/Debug/net5.0/${dll_location}",
+                "request": "attach",
+                "program": "${workspaceRoot}/bin/Debug/netcoreapp2.1/${dll_location}",
                 "args": [],
-                "stopAtEntry": true,
-                "cwd": "${PWD}"
+                "stopAtEntry": false,
+                "cwd": "${workspaceRoot}"
             }
         },
         "go": {

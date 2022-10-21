@@ -1,11 +1,13 @@
 export ZSH="$HOME/.oh-my-zsh"
+export GO111MODULE=on
+export PATH="$PATH:/Users/rorymagee/go/bin"
 ZSH_DISABLE_COMPFIX=true
 ZSH_THEME="awesomepanda"
-
 HYPHEN_INSENSITIVE="true"
 CASE_SENSITIVE="false"
 
 COMPLETION_WAITING_DOTS="true"
+
 
 unsetopt autocd
 

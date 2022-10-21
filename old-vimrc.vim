@@ -53,7 +53,7 @@ Plug 'mattn/emmet-vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'dense-analysis/ale', {'for': 'cs'}
+Plug 'dense-analysis/ale', {'for': ['typescript', 'javascript']}
 Plug 'valloric/matchtagalways'
 Plug 'tpope/vim-dispatch'
 Plug 'jiangmiao/auto-pairs'
@@ -73,6 +73,7 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
+let NERDTreeShowHidden = 1
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS = '--reverse'
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
@@ -90,9 +91,9 @@ let g:typescript_indent_disable = 1
 let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
 
-let g:ale_linters = {
-\ 'cs': ['OmniSharp'],
-\}
+let g:ale_diable_lsp = 1
+let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:ale_linters = { 'cs': ['OmniSharp'] }
 
 "Navigation
 nnoremap <leader>h :wincmd h<CR>
@@ -115,7 +116,7 @@ nnoremap <leader>rln :set invrelativenumber<CR>
 nnoremap <leader>pv :NERDTreeToggle<CR>
 nnoremap <leader>ppv :NERDTreeFind<CR>
 
-"Resize panes 
+"Resize lanes 
 nnoremap <silent> <Leader>= :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
@@ -129,7 +130,7 @@ inoremap <silent><expr> <TAB>
         \ <SID>check_back_space() ? "\<TAB>" :
         \ coc#refresh()
 
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><S-TAB> pumvisible() ? "\lC-p>" : "\<C-h>"
 inoremap  <silent><expr> <C-space> coc#refresh()
 
 "Vim Fugitive Keybindings
@@ -140,6 +141,7 @@ nmap <leader>gca :Git commit -v -a<CR>
 nmap <leader>gp :Git push<CR>
 nmap <leader>gbr :GBrowse<CR>
 nmap <leader>gbl :Git blame<CR>
+nmap <leader>gdf :Git diff<CR>
 
 " Mergetool will add all merge conflicts to a qf list 
 " Diffsplit will open a split of the current file
