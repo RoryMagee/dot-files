@@ -1,16 +1,17 @@
 export ZSH="$HOME/.oh-my-zsh"
-export GO111MODULE=on
-export PATH="$PATH:/Users/rorymagee/go/bin"
-ZSH_DISABLE_COMPFIX=true
 ZSH_THEME="robbyrussell"
-HYPHEN_INSENSITIVE="true"
-CASE_SENSITIVE="false"
-
-COMPLETION_WAITING_DOTS="true"
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
+export GO111MODULE=on
+export PATH="$PATH:/Users/rorymagee/go/bin"
+ZSH_DISABLE_COMPFIX=true
+HYPHEN_INSENSITIVE="true"
+CASE_SENSITIVE="false"
+
+COMPLETION_WAITING_DOTS="true"
 
 # Plugins section
 
