@@ -2,22 +2,13 @@ export ZSH="$HOME/.oh-my-zsh"
 export GO111MODULE=on
 export PATH="$PATH:/Users/rorymagee/go/bin"
 ZSH_DISABLE_COMPFIX=true
-ZSH_THEME="awesomepanda"
+ZSH_THEME="robbyrussell"
 HYPHEN_INSENSITIVE="true"
 CASE_SENSITIVE="false"
 
 COMPLETION_WAITING_DOTS="true"
 
-
-unsetopt autocd
-
-plugins=(
-    git
-    docker
-    npm
-    ng
-    tmux
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -25,8 +16,7 @@ source $ZSH/oh-my-zsh.sh
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # Update zplug home for mac os
-    export ZPLUG_HOME=/usr/local/opt/zplug
-    export COMPOSE_HTTP_TIMEOUT=200
+    export ZPLUG_HOME=/opt/homebrew/opt/zplug
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias ccc="xclip -sel clip"
     # *nix specific aliases
@@ -56,11 +46,11 @@ if [[ -n $SSH_CONNECTION ]]; then
 fi
 
 alias sudo="sudo "
-alias dkr="docker"
-alias dkrc="docker-compose"
-alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
-alias rgf="rg --files | rg"
 alias docker-clean='docker volume rm $(docker volume ls -qf dangling=true)'
+alias startdb="pg_ctl -D /opt/homebrew/var/postgresql@14 start"
+alias stopdb="pg_ctl -D /opt/homebrew/var/postgresql@14 stop"
+
+[ -s "/Users/rorymagee/.bun/_bun" ] && source "/Users/rorymagee/.bun/_bun"
 
 function chpwd() {
     emulate -L zsh

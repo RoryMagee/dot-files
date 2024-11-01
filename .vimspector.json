@@ -121,7 +121,8 @@
                 "request": "launch",
                 "program": "${fileDirname}",
                 "mode": "debug",
-                "dlvToolPath": "$HOME/go/bin/dlv"
+                "dlvToolPath": "$HOME/go/bin/dlv",
+                "showLog": true
             }
         },
         "go-test": {
@@ -132,6 +133,14 @@
                 "mode": "test",
                 "dlvToolPath": "$HOME/go/bin/dlv",
                 "showLog": true
+            }
+        },
+        "rust-launch": {
+            "adapter": "CodeLLDB",
+            "filetypes": [ "rust" ],
+            "configuration": {
+                "request": "launch",
+                "program": "${PWD}/target/debug/${folderName}"
             }
         }
     }

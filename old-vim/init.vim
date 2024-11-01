@@ -4,7 +4,7 @@ set expandtab
 set smartindent
 set guicursor=
 set relativenumber
-set noerrorbells
+set noerrorbells 
 set nu
 set nowrap
 set noswapfile
@@ -13,7 +13,7 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set termguicolors
-set scrolloff=8
+set scrolloff=2
 set noshowmode
 set completeopt=menuone,noinsert,noselect
 set signcolumn=yes
@@ -23,6 +23,7 @@ set splitright
 set belloff=all
 set autoread
 set nohlsearch
+set mouse=
 
 call plug#begin('~/.vim/plugged')
 Plug 'nvim-lua/plenary.nvim'
@@ -34,7 +35,7 @@ Plug 'chrisbra/csv.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'jiangmiao/auto-pairs'
-Plug 'valloric/matchtagalways'
+" Plug 'valloric/matchtagalways'
 Plug 'tpope/vim-fugitive'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -46,12 +47,14 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'preservim/nerdtree'
 Plug 'puremourning/vimspector'
 Plug 'hashivim/vim-terraform'
-Plug '~/dev/personal/nvim-cake'
+Plug 'nvim-treesitter/nvim-treesitter-context'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'ziglang/zig.vim'
 call plug#end()
 
 luafile ~/dot-files/lua/lsp.lua
 luafile ~/dot-files/lua/telescope.lua
-
+ 
 colorscheme gruvbox
 
 syntax enable
@@ -60,6 +63,8 @@ let mapleader = " "
 let g:netrw_browse_split=2
 let g:netrw_banner=0
 let g:netrw_winsize = 25
+let g:vimspector_base_dir='/Users/rorymagee/.vim/plugged/vimspector'
+
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 
 "Navigation stuff
@@ -72,6 +77,7 @@ nnoremap <C-j> :cnext<CR>
 nnoremap H gT
 nnoremap L gt
 nnoremap <leader>pv :NERDTreeToggle<CR>
+
 
 "Lua ish
 nnoremap <C-p> :lua require('telescope.builtin').git_files()<cr>
